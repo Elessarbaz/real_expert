@@ -1,0 +1,351 @@
+/* НАЧАЛО подключаем шрифт "Champagne&Limousines": */
+@font-face {
+  font-family: "Champagne&Limousines";
+  src: url("../fonts/champagne_and_limousines/Champagne_amp_amp_Limousines.otf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Champagne&Limousines";
+  src: url("../fonts/champagne_and_limousines/Champagne_amp_amp_Limousines_Bold.otf") format("truetype");
+  font-weight: bold;
+}
+/* КОНЕЦ подключаем шрифт "Champagne&Limousines"*/
+
+/* НАЧАЛО инициализация переменных SASS: */
+$color-bright: #ef7f1a;
+$main-font: "Champagne&Limousines", sans-serif;
+/* КОНЕЦ инициализация переменных SASS: */
+
+/* НАЧАЛО ОБЩИЕ СТИЛИ */
+/* НАЧАЛО оформляем placeholder'ы форм: */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #333;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #333;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #333;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #333;
+}
+/* КОНЕЦ оформляем placeholder'ы форм */
+
+body {
+  background: url("../img/backround_plaster.jpg");
+  color: #222;
+  font-family: $main-font;
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.btn {
+  background: $color-bright;
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 2px;
+  border: none;
+  margin: 10px 0;
+  padding: 7px 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  &:hover {
+    background: lighten($color-bright, 10);
+    color: white;
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  font-family: $main-font;
+  text-align: center;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 24px;
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
+}
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+/* КОНЕЦ ОБЩИЕ СТИЛИ */
+
+/* НАЧАЛО навбар */
+.uk-navbar-nav {
+  float: none;
+  border-bottom: 3px solid #e8ae79;
+  text-align: center;
+
+  & > li {
+    float: none;
+    display: inline-block;
+
+    a {
+      font-family: $main-font;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  & > li.uk-active {
+    & > a {
+      color: $color-bright;
+    }
+  }
+}
+/* КОНЕЦ навбар */
+
+/* НАЧАЛО блока "Начало" */
+.home {
+  background: #e5e5e5;
+  padding: 35px 0;
+  @media (max-width: 1219px) and (min-width: 768px) {
+    .uk-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  @media screen and (min-width: 1220px) {
+    min-height: 450px;
+    background: 50% 100%/cover url("../img/main_background.png") no-repeat;
+  }
+
+  .logo_phone_slogan_col {
+    text-align: center;
+    margin: 0 auto;
+    @media screen and (min-width: 768px) {
+      max-width: 230px;
+    }
+    @media screen and (min-width: 1220px) {
+      float: left;
+    }
+
+    .phone-numbers {
+      line-height: 1.5;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .slogan {
+      @media screen and (min-width: 768px) {
+        margin-top: 15px;
+      }
+      span {
+        font-size: 1.4em;
+        font-weight: bold;
+        text-transform: none;
+      }
+    }
+  }
+  form {
+    text-align: center;
+    background: #e8ae79;
+    border-radius: 5px;
+
+    max-width: 250px;
+    box-sizing: border-box;
+
+    padding: 25px 25px 40px;
+    margin: 0 auto;
+    @media screen and (min-width: 1220px) {
+      float: right;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    input {
+      font-family: $main-font;
+      font-size: 18px;
+      box-sizing: border-box;
+      width: 100%;
+      border-radius: 2px;
+      border: none;
+      margin: 10px 0;
+      padding: 5px 10px;
+    }
+
+    input[type=submit] {
+      background: $color-bright;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+/* КОНЕЦ блока "Начало" */
+
+/* НАЧАЛО блока "services" */
+.services {
+  padding: 35px 0 25px;
+  text-align: center;
+  .uk-grid {
+    & > li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      @media screen and (min-width: 768px){
+        align-items: flex-start;
+        flex-flow: row;
+      }
+      h2 {
+        font-size: 20px;
+      }
+
+      img {
+        margin-right: 20px;
+        max-width: 100px;
+        @media screen and (min-width: 768px){
+          max-width: 150px;
+        }
+      }
+
+      h3 {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+/* КОНЕЦ блока "services" */
+
+/* НАЧАЛО блока "advantages" */
+.advantages {
+  .uk-grid {
+    & > li {
+      @media screen and (min-width: 768px){
+        align-items: center;
+      }
+    }
+  }
+  .btn {
+    margin-top: 25px;
+  }
+}
+/* КОНЕЦ блока "advantages" */
+
+/* НАЧАЛО блока "work-scheme" */
+.work-scheme {
+  padding: 35px 0 25px;
+  .uk-grid {
+    text-align: center;
+    & > li {
+      display: flex;
+      flex-flow: column;
+      h3 {
+        font-size: 20px;
+      }
+      img {
+        max-width: 65px;
+      }
+      @media screen and (min-width: 768px){
+        flex-flow: row;
+        align-items: center;
+        img {
+          max-width: none;
+        }
+      }
+    }
+  }
+}
+/* КОНЕЦ блока "work-scheme" */
+
+/* НАЧАЛО блока "certificates" */
+.certificates {
+  padding: 25px 0 35px;
+  a {
+    padding: 25px;
+    display: block;
+  }
+}
+/* КОНЕЦ блока "certificates" */
+
+/* НАЧАЛО блока "about" */
+.about {
+  padding: 35px 0 25px;
+  background: white;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: justify;
+
+  img {
+    padding-bottom: 25px;
+  }
+}
+/* КОНЕЦ блока "about" */
+
+/* НАЧАЛО блока "clients" */
+.clients {
+  padding: 35px 0 50px;
+  text-align: center;
+  li > div {
+    border: 3px solid #edb57a;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+/* КОНЕЦ блока "clients" */
+
+/* НАЧАЛО footer */
+footer {
+  font-size: 20px;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  background: black;
+  color: white;
+  .logo-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    .logo {
+      width: 100%;
+    }
+    p {
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+  .map-container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    @media screen and (min-width: 768px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  .contacts-container {
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
+    h3 {
+      color: white;
+      text-align: center;
+      @media screen and (min-width: 768px) {
+        text-align: left;
+      }
+    }
+  }
+}
+/* КОНЕЦ footer */
