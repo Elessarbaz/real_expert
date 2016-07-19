@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/* НАЧАЛО подключаем шрифт "Champagne&Limousines": */
+@font-face {
+  font-family: "Champagne&Limousines";
+  src: url("../fonts/champagne_and_limousines/Champagne_amp_amp_Limousines.otf") format("truetype");
+  font-weight: normal; }
+@font-face {
+  font-family: "Champagne&Limousines";
+  src: url("../fonts/champagne_and_limousines/Champagne_amp_amp_Limousines_Bold.otf") format("truetype");
+  font-weight: bold; }
+/* КОНЕЦ подключаем шрифт "Champagne&Limousines"*/
+/* НАЧАЛО инициализация переменных SASS: */
+/* КОНЕЦ инициализация переменных SASS: */
+/* НАЧАЛО ОБЩИЕ СТИЛИ */
+/* НАЧАЛО оформляем placeholder'ы форм: */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #333; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #333; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #333; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #333; }
+
+/* КОНЕЦ оформляем placeholder'ы форм */
+body {
+  background: url("../img/backround_plaster.jpg");
+  color: #222;
+  font-family: "Champagne&Limousines", sans-serif;
+  font-size: 18px; }
+
+a {
+  color: inherit; }
+  a:hover {
+    color: inherit; }
+
+.btn {
+  background: #ef7f1a;
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 2px;
+  border: none;
+  margin: 10px 0;
+  padding: 7px 15px;
+  cursor: pointer;
+  text-transform: uppercase; }
+  .btn:hover {
+    background: #f29a4a;
+    color: white;
+    text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  font-family: "Champagne&Limousines", sans-serif;
+  text-align: center;
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 24px; }
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 30px; } }
+
+h2 {
+  font-size: 22px;
+  font-weight: bold; }
+  @media screen and (min-width: 768px) {
+    h2 {
+      font-size: 24px; } }
+
+/* КОНЕЦ ОБЩИЕ СТИЛИ */
+/* НАЧАЛО навбар */
+.uk-navbar-nav {
+  float: none;
+  border-bottom: 3px solid #e8ae79;
+  text-align: center; }
+  .uk-navbar-nav > li {
+    float: none;
+    display: inline-block; }
+    .uk-navbar-nav > li a {
+      font-family: "Champagne&Limousines", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase; }
+  .uk-navbar-nav > li.uk-active > a {
+    color: #ef7f1a; }
+
+/* КОНЕЦ навбар */
+/* НАЧАЛО блока "Начало" */
+.home {
+  background: #e5e5e5;
+  padding: 35px 0; }
+  @media (max-width: 1219px) and (min-width: 768px) {
+    .home .uk-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (min-width: 1220px) {
+    .home {
+      min-height: 450px;
+      background: 50% 100%/cover url("../img/main_background.png") no-repeat; } }
+  .home .logo_phone_slogan_col {
+    text-align: center;
+    margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      .home .logo_phone_slogan_col {
+        max-width: 230px; } }
+    @media screen and (min-width: 1220px) {
+      .home .logo_phone_slogan_col {
+        float: left; } }
+    .home .logo_phone_slogan_col .phone-numbers {
+      line-height: 1.5;
+      font-size: 20px;
+      font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      .home .logo_phone_slogan_col .slogan {
+        margin-top: 15px; } }
+    .home .logo_phone_slogan_col .slogan span {
+      font-size: 1.4em;
+      font-weight: bold;
+      text-transform: none; }
+  .home form {
+    text-align: center;
+    background: #e8ae79;
+    border-radius: 5px;
+    max-width: 250px;
+    box-sizing: border-box;
+    padding: 25px 25px 40px;
+    margin: 0 auto; }
+    @media screen and (min-width: 1220px) {
+      .home form {
+        float: right; } }
+    .home form p {
+      font-size: 24px; }
+    .home form input {
+      font-family: "Champagne&Limousines", sans-serif;
+      font-size: 18px;
+      box-sizing: border-box;
+      width: 100%;
+      border-radius: 2px;
+      border: none;
+      margin: 10px 0;
+      padding: 5px 10px; }
+    .home form input[type=submit] {
+      background: #ef7f1a;
+      color: white;
+      cursor: pointer; }
+
+/* КОНЕЦ блока "Начало" */
+/* НАЧАЛО блока "services" */
+.services {
+  padding: 35px 0 25px;
+  text-align: center; }
+  .services .uk-grid > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column; }
+    @media screen and (min-width: 768px) {
+      .services .uk-grid > li {
+        align-items: flex-start;
+        flex-flow: row; } }
+    .services .uk-grid > li h2 {
+      font-size: 20px; }
+    .services .uk-grid > li img {
+      margin-right: 20px;
+      max-width: 100px; }
+      @media screen and (min-width: 768px) {
+        .services .uk-grid > li img {
+          max-width: 150px; } }
+    .services .uk-grid > li h3 {
+      margin: 10px 0; }
+
+/* КОНЕЦ блока "services" */
+/* НАЧАЛО блока "advantages" */
+@media screen and (min-width: 768px) {
+  .advantages .uk-grid > li {
+    align-items: center; } }
+.advantages .btn {
+  margin-top: 25px; }
+
+/* КОНЕЦ блока "advantages" */
+/* НАЧАЛО блока "work-scheme" */
+.work-scheme {
+  padding: 35px 0 25px; }
+  .work-scheme .uk-grid {
+    text-align: center; }
+    .work-scheme .uk-grid > li {
+      display: flex;
+      flex-flow: column; }
+      .work-scheme .uk-grid > li h3 {
+        font-size: 20px; }
+      .work-scheme .uk-grid > li img {
+        max-width: 65px; }
+      @media screen and (min-width: 768px) {
+        .work-scheme .uk-grid > li {
+          flex-flow: row;
+          align-items: center; }
+          .work-scheme .uk-grid > li img {
+            max-width: none; } }
+
+/* КОНЕЦ блока "work-scheme" */
+/* НАЧАЛО блока "certificates" */
+.certificates {
+  padding: 25px 0 35px; }
+  .certificates a {
+    padding: 25px;
+    display: block; }
+
+/* КОНЕЦ блока "certificates" */
+/* НАЧАЛО блока "about" */
+.about {
+  padding: 35px 0 25px;
+  background: white;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: justify; }
+  .about img {
+    padding-bottom: 25px; }
+
+/* КОНЕЦ блока "about" */
+/* НАЧАЛО блока "clients" */
+.clients {
+  padding: 35px 0 50px;
+  text-align: center; }
+  .clients li > div {
+    border: 3px solid #edb57a;
+    border-radius: 5px;
+    padding: 10px; }
+  .clients h3 {
+    font-weight: bold;
+    text-transform: uppercase; }
+
+/* КОНЕЦ блока "clients" */
+/* НАЧАЛО footer */
+footer {
+  font-size: 20px;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  background: black;
+  color: white; }
+  footer .logo-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center; }
+    footer .logo-container .logo {
+      width: 100%; }
+    footer .logo-container p {
+      text-align: center;
+      font-size: 30px; }
+  footer .map-container {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    @media screen and (min-width: 768px) {
+      footer .map-container {
+        padding-top: 0;
+        padding-bottom: 0; } }
+  footer .contacts-container {
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      footer .contacts-container {
+        text-align: left; } }
+    footer .contacts-container h3 {
+      color: white;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        footer .contacts-container h3 {
+          text-align: left; } }
+
+/* КОНЕЦ footer */
+
+/*# sourceMappingURL=styles.css.map */

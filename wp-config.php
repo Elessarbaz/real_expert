@@ -20,15 +20,15 @@
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
-define('DB_NAME', 'zan_zakon');
+define('DB_NAME', 'real_expert');
 
 /** Имя пользователя MySQL */
 define('DB_USER', 'root');
 
 /** Пароль к базе данных MySQL */
 define('DB_PASSWORD', 'root');
-//Zakon_amd
-//АлавАУлшщрувкЕцоу№"№"№?,
+//R_E_amin
+//оупрЦалпшови()-Впждщоку";№"Кп3
 /** Имя сервера MySQL */
 define('DB_HOST', 'localhost');
 

@@ -1,28 +1,41 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package real_expert
- */
+	<!--НАЧАЛО contacts-->
+	<footer id="contacts">
+		<div class="uk-container uk-container-center">
+			<div class="uk-grid">
+				<div class="uk-width-medium-3-10 logo-container">
+					<a href="/"><img class="logo" src="<?=get_field('logo-f',4)?>" alt="Лого"></a>
+					<p class="slogan uk-hidden-small"><?=get_field('slogan-2',4)?></p>
+				</div>
+				<div class="uk-width-medium-5-10 map-container">
+					<?=get_field('map',4)?>
+				</div>
+				<div class="uk-width-medium-2-10 contacts-container">
+					<h3>Контакты</h3>
 
-?>
+					<p>
+						<?=get_field('address',4)?>
+					</p>
 
-	</div><!-- #content -->
+					<p><a href="tel:<?=get_field('phone-1',4)?>"><?=get_field('phone-1',4)?></a> <br>
+						<a href="tel:<?=get_field('phone-2',4)?>"><?=get_field('phone-2',4)?></a> <br>
+						<a href="tel:<?=get_field('phone-3',4)?>"><?=get_field('phone-3',4)?> <?=get_field('phone-3-name',4)?></a> <br>
+						<a href="tel:<?=get_field('phone-4',4)?>"><?=get_field('phone-4',4)?> <?=get_field('phone-4-name',4)?></a>
+					</p>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'real_expert' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'real_expert' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'real_expert' ), 'real_expert', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+					<p><a href="mailto:<?=get_field('email',4)?>"><?=get_field('email',4)?></a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--КОНЕЦ contacts-->
 
-<?php wp_footer(); ?>
 
+<script src="<?php bloginfo('template_directory') ?>/public/js/jquery-3.1.0.min.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/public/js/uikit.min.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/public/js/components/slider.min.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/public/js/components/slideshow.min.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/public/js/components/lightbox.min.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/public/js/components/sticky.min.js"></script>
+<?php //wp_footer(); ?>
 </body>
 </html>
