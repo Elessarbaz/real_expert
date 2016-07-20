@@ -159,31 +159,38 @@ h2 {
 .services {
   padding: 35px 0 25px;
   text-align: center; }
+  .services > h2 {
+    margin-bottom: 40px; }
   .services .uk-grid > li {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-flow: column; }
-    @media screen and (min-width: 768px) {
-      .services .uk-grid > li {
-        align-items: flex-start;
-        flex-flow: row; } }
+    .services .uk-grid > li > .border {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      border-radius: 5px;
+      border: 2px #ef7f1a solid;
+      padding: 15px; }
     .services .uk-grid > li h2 {
       font-size: 20px; }
     .services .uk-grid > li img {
-      margin-right: 20px;
       max-width: 100px; }
       @media screen and (min-width: 768px) {
         .services .uk-grid > li img {
           max-width: 150px; } }
     .services .uk-grid > li h3 {
-      margin: 10px 0; }
+      margin: 5px 0; }
+    .services .uk-grid > li .blink-cb-open-popup {
+      margin-top: auto; }
 
 /* КОНЕЦ блока "services" */
 /* НАЧАЛО блока "advantages" */
-@media screen and (min-width: 768px) {
-  .advantages .uk-grid > li {
-    align-items: center; } }
+.advantages .big-number {
+  font-size: 56px;
+  font-weight: bold; }
+.advantages li h2 {
+  font-weight: normal; }
 .advantages .btn {
   margin-top: 25px; }
 

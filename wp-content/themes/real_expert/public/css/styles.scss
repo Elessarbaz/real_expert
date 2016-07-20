@@ -196,30 +196,36 @@ h2 {
 .services {
   padding: 35px 0 25px;
   text-align: center;
+  &>h2 {
+    margin-bottom: 40px;
+  }
   .uk-grid {
     & > li {
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-flow: column;
-      @media screen and (min-width: 768px){
-        align-items: flex-start;
-        flex-flow: row;
+      & > .border {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        border-radius: 5px;
+        border: 2px $color-bright solid;
+        padding: 15px;
       }
       h2 {
         font-size: 20px;
       }
-
       img {
-        margin-right: 20px;
         max-width: 100px;
         @media screen and (min-width: 768px){
           max-width: 150px;
         }
       }
-
       h3 {
-        margin: 10px 0;
+        margin: 5px 0;
+      }
+      .blink-cb-open-popup {
+        margin-top: auto;
       }
     }
   }
@@ -228,12 +234,12 @@ h2 {
 
 /* НАЧАЛО блока "advantages" */
 .advantages {
-  .uk-grid {
-    & > li {
-      @media screen and (min-width: 768px){
-        align-items: center;
-      }
-    }
+  .big-number {
+    font-size: 56px;
+    font-weight: bold;
+  }
+  li h2 {
+    font-weight: normal;
   }
   .btn {
     margin-top: 25px;

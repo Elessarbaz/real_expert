@@ -29,15 +29,15 @@
 	<div id="services" class="services uk-container uk-container-center">
 		<?php $services=get_posts(array('category_name'=>'services','nuberposts'=>4 ,'order'=>'ASC','orderby'=>'id')) ?>
 		<h2>Наши услуги по оценке имущества</h2>
-		<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2" data-uk-grid-margin>
+		<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-4" data-uk-grid-margin>
 			<?php foreach ($services as $post): setup_postdata($post); ?>
 			<li>
-				<img src="<?=get_the_post_thumbnail_url()?>">
-				<div>
-					<h2><a href="#"><?=get_the_title()?></a></h2>
-					<?=get_the_content()?>
+				<div class="border">
+					<img src="<?= get_the_post_thumbnail_url() ?>">
+					<h2><a href="#"><?= get_the_title() ?></a></h2>
+					<?= get_the_content() ?>
 					<div class="blink-cb-open-popup">
-					<a class="search-blink-cb-module-btn btn" href="#recall">Связаться с нами</a>
+						<a class="search-blink-cb-module-btn btn" href="#recall">Связаться с нами</a>
 					</div>
 				</div>
 			</li>
@@ -46,17 +46,34 @@
 	</div>
 	<!--КОНЕЦ блока "services"-->
 
-	<!--НАЧАЛО блока "advantages" делит стили с "services", поэтому есть класс .services-->
+	<!--НАЧАЛО блока "advantages"-->
 	<div id="advantages" class="services advantages uk-container uk-container-center">
 		<h2>Почему стоит заказывать услуги оценки у нас</h2>
 		<?php $gallery=pp_gallery_get(4); ?>
-		<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2" data-uk-grid-margin>
-			<?php foreach ($gallery as $image ): ?>
+		<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-4" data-uk-grid-margin>
+			<!--?php foreach ($gallery as $image ): ?>
 			<li>
 				<img src="<?=$image->url?>">
 				<h2><?=$image->description?></h2>
+			</li-->
+			<!--?php endforeach; wp_reset_query(); ?-->
+
+			<li>
+				<div class="big-number">#1</div>
+				<h2>Быстрый и качественный результат</h2>
 			</li>
-			<?php endforeach; wp_reset_query(); ?>
+			<li>
+				<div class="big-number">10</div>
+				<h2>Мы более 10 лет на рынке</h2>
+			</li>
+			<li>
+				<div class="big-number">95%</div>
+				<h2>95% довольных клиентов</h2>
+			</li>
+			<li>
+				<div class="big-number">30 мин</div>
+				<h2>Выезд специалиста в течение 30 минут</h2>
+			</li>
 		</ul>
 		<div class="blink-cb-open-popup">
 			<a class="search-blink-cb-module-btn btn" href="#recall">Заказать оценку</a>
