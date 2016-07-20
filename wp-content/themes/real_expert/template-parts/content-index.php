@@ -1,6 +1,14 @@
 
 	<!--НАЧАЛО блока "Начало"-->
-	<div id="home" class="home" style= " background: 50% 100%/cover url('<?=get_the_post_thumbnail_url()?>') no-repeat">
+    <style>
+
+        @media screen and (min-width: 1220px) {
+            .home {
+                background: 50% 100%/cover url('<?=get_the_post_thumbnail_url()?>') no-repeat;
+            }
+        }
+    </style>
+	<div id="home" class="home">
 		<div class="uk-container uk-container-center">
 			<div class="logo_phone_slogan_col">
 				<img src="<?=get_field('logo',4)?>" alt="Лого">
