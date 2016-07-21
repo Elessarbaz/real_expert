@@ -46,6 +46,8 @@
 		console.log();
 		VMasker(el).maskPattern("+9(999) 999-99-99"); // masking the input
 	</script>
+	<?=get_field('google',4)?>
+	<?=get_field('yandex',4)?>
 <?php wp_footer(); ?>
 </body>
 </html>
