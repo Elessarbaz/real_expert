@@ -50,7 +50,7 @@
 				<div class="border">
 					<img src="<?= get_the_post_thumbnail_url() ?>">
 					<h2><a href="#"><?= get_the_title() ?></a></h2>
-					<?= get_the_content() ?>
+					<?php the_content() ?>
 					<div class="blink-cb-open-popup">
 						<a class="search-blink-cb-module-btn btn" href="#recall">Связаться с нами</a>
 					</div>
@@ -158,9 +158,9 @@
 					<img src="<?=get_the_post_thumbnail_url()?>" alt="Лого">
 				</div>
 				<div class="uk-width-medium-7-10">
-					<p>
-						<?=get_the_content()?>
-					</p>
+					<article>
+						<?php the_content()?>
+					</article>
 				</div>
 			</div>
 		</div>
@@ -183,7 +183,7 @@
 								<img src="<?=get_the_post_thumbnail_url()?>" alt="Клиент">
 								<h3><?=get_the_title()?></h3>
 								<p>
-									<?=get_the_content()?>
+									<?php the_content()?>
 								</p>
 							</div>
 						</li>
