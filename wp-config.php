@@ -27,8 +27,6 @@ define('DB_USER', 'reale_user');
 
 /** Пароль к базе данных MySQL */
 define('DB_PASSWORD', 'Myue*734');
-//R_E_amin
-//оупрЦалпшови()-Впждщоку";№"Кп3
 /** Имя сервера MySQL */
 define('DB_HOST', 'srv-pleskdb15.ps.kz:3306');
 
