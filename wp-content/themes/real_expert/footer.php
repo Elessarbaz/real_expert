@@ -4,7 +4,6 @@
 			<div class="uk-grid">
 				<div class="uk-width-medium-3-10 logo-container">
 					<a href="/"><img class="logo" src="<?=get_field('logo-f',4)?>" alt="Лого"></a>
-					<p class="slogan uk-hidden-small"><?=get_field('slogan-2',4)?></p>
 				</div>
 				<div class="uk-width-medium-5-10 map-container">
 					<?=get_field('map',4)?>
@@ -36,16 +35,19 @@
 <script src="<?php bloginfo('template_directory') ?>/public/js/components/slideshow.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/public/js/components/lightbox.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/public/js/components/sticky.min.js"></script>
-	<script src="https://bsh.su/client/script/GET/"></script>
-	<script>
-		var submitSMG = new BMModule();
-		submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Получить консультацию'); $('.blink-mailer input,.blink-mailer textarea').prop('disabled', true); $('p.success-mail-text').html(success); /*$('.blink-mailer').hide(500); */ /*$('.success-mail-text').show(500); */ }, function(error) {console.log((error))});
-	</script>
-	<script>
-		var el = document.querySelector('input[type="tel"]');
-		console.log();
-		VMasker(el).maskPattern("+9(999) 999-99-99"); // masking the input
-	</script>
+<script src="<?php bloginfo('template_directory') ?>/public/js/countUp.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/public/js/jquery.waypoints.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/public/js/scripts.js"></script>
+<script src="https://bsh.su/client/script/GET/"></script>
+<script>
+	var submitSMG = new BMModule();
+	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Получить консультацию'); $('.blink-mailer input,.blink-mailer textarea').prop('disabled', true); $('p.success-mail-text').html(success); /*$('.blink-mailer').hide(500); */ /*$('.success-mail-text').show(500); */ }, function(error) {console.log((error))});
+</script>
+<script>
+	var el = document.querySelector('input[type="tel"]');
+	console.log();
+	VMasker(el).maskPattern("+9(999) 999-99-99"); // masking the input
+</script>
 	<?=get_field('google',4)?>
 	<?=get_field('yandex',4)?>
 <?php wp_footer(); ?>

@@ -33,9 +33,7 @@
 				<input type="tel" placeholder="Телефон" name="Телефон">
 				<input type="submit" value="Получить консультацию">
 			</form>
-			<div>
-				<h1 class="slogan"><?= get_field('slogan-1', 4) ?></h1>
-			</div>
+			<h1 class="slogan"><?= get_field('slogan-1', 4) ?></h1>
 		</div>
 	</div>
 	<!--КОНЕЦ блока "Начало"-->
@@ -62,38 +60,51 @@
 	<!--КОНЕЦ блока "services"-->
 
 	<!--НАЧАЛО блока "advantages"-->
-	<div id="advantages" class="services advantages">
+	<div id="advantages" class="advantages">
 		<div class="uk-container uk-container-center">
 			<h2>Почему стоит заказывать услуги оценки у нас</h2>
 			<?php $gallery=pp_gallery_get(4); ?>
-			<div class="uk-grid uk-flex-middle">
+			<div class="uk-grid">
 				<div class="uk-width-medium-1-2">
-					<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2" data-uk-grid-margin>
+					<ul class="uk-grid uk-grid-medium uk-grid-width-1-1 uk-grid-width-medium-1-2" data-uk-grid-margin>
 						<li>
-							<div class="big-number">#1</div>
-							<h2>Быстрый и качественный результат</h2>
+							<div class="border">
+								<div class="big-number">#<span id="count1Element">1</span></div>
+								<h2>Быстрый и качественный результат</h2>
+							</div>
 						</li>
 						<li>
-							<div class="big-number">10</div>
-							<h2>Мы более 10 лет на рынке</h2>
+							<div class="border">
+								<div class="big-number"><span id="count10Element">10</span></div>
+								<h2>Мы более 10 лет на рынке</h2>
+							</div>
 						</li>
 						<li>
-							<div class="big-number">95%</div>
-							<h2>95% довольных клиентов</h2>
+							<div class="border">
+								<div class="big-number"><span id="count95Element">95</span>%</div>
+								<h2>95% довольных клиентов</h2>
+							</div>
 						</li>
 						<li>
-							<div class="big-number">30 мин</div>
-							<h2>Выезд специалиста в течение 30 минут</h2>
+							<div class="border">
+								<div class="big-number"><span id="count30Element">30</span> мин</div>
+								<h2>Выезд специалиста в течение 30 минут</h2>
+							</div>
 						</li>
 					</ul>
 				</div>
-				<div class="uk-width-medium-1-4">
-					<img src="<?php bloginfo('template_directory') ?>/public/img/example.jpg" alt="Картинка">
+				<div class="uk-width-medium-1-2 second-col">
+					<div class="uk-grid img-and-text">
+						<div class="uk-width-1-1">
+							<div class="border">
+								<img src="<?php bloginfo('template_directory') ?>/public/img/time-is-money.jpg"
+									 alt="Картинка" class="uk-hidden-small">
+								<p class="text-section">Мы экономим Ваше время и деньги. Наши специалисты <span>САМОСТОЯТЕЛЬНО</span>
+									выезжают на объект оценки в удобное для Вас время!</p>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="uk-width-medium-1-4">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad earum eligendi fugiat iusto laborum mollitia nam quo sapiente. Eius iusto magni necessitatibus praesentium reiciendis sapiente similique sint veritatis. Animi aspernatur autem blanditiis doloremque earum hic libero molestias nesciunt nihil possimus quibusdam quis, reiciendis rem tenetur vitae! Ad atque dolorem doloribus facilis fuga ipsum itaque necessitatibus, nihil odio quae quia, sed temporibus voluptatum.</p>
-				</div>
-
 			</div>
 
 

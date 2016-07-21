@@ -152,11 +152,11 @@ h2 {
       color: white;
       cursor: pointer; }
   .home .slogan {
-    max-width: 300px;
+    margin: 15px auto 0;
     line-height: 1.6; }
     @media screen and (min-width: 768px) {
       .home .slogan {
-        margin-top: 15px; } }
+        max-width: 300px; } }
     .home .slogan span {
       font-size: 1.4em;
       font-weight: bold;
@@ -176,10 +176,17 @@ h2 {
       flex: 1;
       display: flex;
       flex-flow: column;
+      justify-content: center;
       align-items: center;
       border-radius: 5px;
       border: 2px #ef7f1a solid;
       padding: 15px; }
+    .services .uk-grid > li:nth-child(2) .border {
+      border-color: #727271; }
+    .services .uk-grid > li:nth-child(3) .border {
+      border-color: #7690c9; }
+    .services .uk-grid > li:nth-child(4) .border {
+      border-color: #e31e24; }
     .services .uk-grid > li h2 {
       font-size: 20px; }
     .services .uk-grid > li img {
@@ -190,7 +197,7 @@ h2 {
     .services .uk-grid > li ul {
       padding: 0;
       margin: 0;
-      list-style: none; }
+      list-style: inside circle; }
     .services .uk-grid > li h3 {
       margin: 5px 0;
       text-align: left;
@@ -201,17 +208,73 @@ h2 {
 /* КОНЕЦ блока "services" */
 /* НАЧАЛО блока "advantages" */
 .advantages {
-  background: white; }
+  padding: 35px 0 25px;
+  background: white;
+  text-align: center; }
   .advantages > div > h2 {
     margin-bottom: 35px; }
+  .advantages [class*="uk-grid"] > li {
+    height: 160px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: stretch; }
+  .advantages .second-col {
+    display: flex;
+    flex-flow: column; }
+  .advantages .border {
+    color: white;
+    border: 2px solid #ef7f1a;
+    background: #ef7f1a;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; }
+  .advantages li:nth-child(2) .border {
+    background: #727271;
+    border-color: #727271; }
+  .advantages li:nth-child(3) .border {
+    background: #7690c9;
+    border-color: #7690c9; }
+  .advantages li:nth-child(4) .border {
+    background: #e31e24;
+    border-color: #e31e24; }
   .advantages .big-number {
-    font-size: 56px;
+    font-size: 48px;
     font-weight: bold; }
   .advantages li h2 {
+    color: white;
+    font-size: 22px;
     font-weight: normal;
-    margin-top: 0; }
-  .advantages p {
-    font-size: 20px; }
+    margin: 0; }
+  .advantages .img-and-text {
+    flex: 1;
+    margin-top: 25px; }
+    @media screen and (min-width: 768px) {
+      .advantages .img-and-text {
+        margin-top: 0;
+        font-size: 28px; } }
+    .advantages .img-and-text .border {
+      display: flex;
+      flex-flow: row wrap;
+      padding: 1px; }
+      @media screen and (min-width: 1220px) {
+        .advantages .img-and-text .border {
+          flex-flow: row nowrap; } }
+    @media screen and (min-width: 1220px) {
+      .advantages .img-and-text img {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px; } }
+  .advantages .text-section {
+    font-size: 22px;
+    padding: 0 20px; }
+    @media screen and (min-width: 1220px) {
+      .advantages .text-section {
+        font-size: 28px; } }
+    .advantages .text-section span {
+      font-weight: bold; }
   .advantages .btn {
     margin-top: 25px; }
 
