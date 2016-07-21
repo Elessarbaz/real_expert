@@ -2,16 +2,20 @@
 	<!--НАЧАЛО блока "Начало"-->
 	<div id="home" class="home" style= " background: 50% 100%/cover url('<?=get_the_post_thumbnail_url()?>') no-repeat">
 		<div class="uk-container uk-container-center">
-			<div class="logo_phone_slogan_col">
+			<div class="logo_and_phone_col">
 				<img src="<?=get_field('logo',4)?>" alt="Лого">
-				<p class="phone-numbers">
-					<img src="<?php bloginfo('template_directory') ?>/public/img/telephone-little.png" alt="Телефон"><br>
-					<a href="tel:<?=get_field('phone-1',4)?>"><?=get_field('phone-1',4)?></a><br>
-					<a href="tel:<?=get_field('phone-2',4)?>"><?=get_field('phone-2',4)?></a><br>
-					<img src="<?php bloginfo('template_directory') ?>/public/img/smartphone-little.png" alt="Телефон"><br>
-					<a href="tel:<?=get_field('phone-3',4)?>"><?=get_field('phone-3',4)?></a><br>
-				</p>
-				<h1 class="slogan"><?=get_field('slogan-1',4)?></h1>
+				<div class="phone-numbers">
+					<h3>Контакты</h3>
+					<p>
+						<img src="<?php bloginfo('template_directory') ?>/public/img/telephone-little.png" alt="Телефон"><br>
+						<a href="tel:<?= get_field('phone-1', 4) ?>"><?= get_field('phone-1', 4) ?></a><br>
+						<a href="tel:<?= get_field('phone-2', 4) ?>"><?= get_field('phone-2', 4) ?></a><br><br>
+
+						<img src="<?php bloginfo('template_directory') ?>/public/img/smartphone-little.png"
+							 alt="Телефон"><br>
+						<a href="tel:<?= get_field('phone-3', 4) ?>"><?= get_field('phone-3', 4) ?></a>
+					</p>
+				</div>
 			</div>
 			<form class="blink-mailer">
 				<input type="hidden" name="title" value="Обратня связь">
@@ -21,6 +25,9 @@
 				<input type="tel" placeholder="Телефон" name="Телефон">
 				<input type="submit" value="Получить консультацию">
 			</form>
+			<div>
+				<h1 class="slogan"><?= get_field('slogan-1', 4) ?></h1>
+			</div>
 		</div>
 	</div>
 	<!--КОНЕЦ блока "Начало"-->
@@ -47,36 +54,44 @@
 	<!--КОНЕЦ блока "services"-->
 
 	<!--НАЧАЛО блока "advantages"-->
-	<div id="advantages" class="services advantages uk-container uk-container-center">
-		<h2>Почему стоит заказывать услуги оценки у нас</h2>
-		<?php $gallery=pp_gallery_get(4); ?>
-		<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-4" data-uk-grid-margin>
-			<!--?php foreach ($gallery as $image ): ?>
-			<li>
-				<img src="<?=$image->url?>">
-				<h2><?=$image->description?></h2>
-			</li-->
-			<!--?php endforeach; wp_reset_query(); ?-->
+	<div id="advantages" class="services advantages">
+		<div class="uk-container uk-container-center">
+			<h2>Почему стоит заказывать услуги оценки у нас</h2>
+			<?php $gallery=pp_gallery_get(4); ?>
+			<div class="uk-grid uk-flex-middle">
+				<div class="uk-width-medium-1-2">
+					<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2" data-uk-grid-margin>
+						<li>
+							<div class="big-number">#1</div>
+							<h2>Быстрый и качественный результат</h2>
+						</li>
+						<li>
+							<div class="big-number">10</div>
+							<h2>Мы более 10 лет на рынке</h2>
+						</li>
+						<li>
+							<div class="big-number">95%</div>
+							<h2>95% довольных клиентов</h2>
+						</li>
+						<li>
+							<div class="big-number">30 мин</div>
+							<h2>Выезд специалиста в течение 30 минут</h2>
+						</li>
+					</ul>
+				</div>
+				<div class="uk-width-medium-1-4">
+					<img src="<?php bloginfo('template_directory') ?>/public/img/example.jpg" alt="Картинка">
+				</div>
+				<div class="uk-width-medium-1-4">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad earum eligendi fugiat iusto laborum mollitia nam quo sapiente. Eius iusto magni necessitatibus praesentium reiciendis sapiente similique sint veritatis. Animi aspernatur autem blanditiis doloremque earum hic libero molestias nesciunt nihil possimus quibusdam quis, reiciendis rem tenetur vitae! Ad atque dolorem doloribus facilis fuga ipsum itaque necessitatibus, nihil odio quae quia, sed temporibus voluptatum.</p>
+				</div>
 
-			<li>
-				<div class="big-number">#1</div>
-				<h2>Быстрый и качественный результат</h2>
-			</li>
-			<li>
-				<div class="big-number">10</div>
-				<h2>Мы более 10 лет на рынке</h2>
-			</li>
-			<li>
-				<div class="big-number">95%</div>
-				<h2>95% довольных клиентов</h2>
-			</li>
-			<li>
-				<div class="big-number">30 мин</div>
-				<h2>Выезд специалиста в течение 30 минут</h2>
-			</li>
-		</ul>
-		<div class="blink-cb-open-popup">
-			<a class="search-blink-cb-module-btn btn" href="#recall">Заказать оценку</a>
+			</div>
+
+
+			<div class="blink-cb-open-popup">
+				<a class="search-blink-cb-module-btn btn" href="#recall">Заказать оценку</a>
+			</div>
 		</div>
 	</div>
 	<!--КОНЕЦ блока "advantages"-->

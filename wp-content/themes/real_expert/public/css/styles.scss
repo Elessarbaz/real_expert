@@ -37,6 +37,7 @@ body {
   color: #222;
   font-family: $main-font;
   font-size: 18px;
+  line-height: 1.2;
 }
 
 a {
@@ -69,6 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $main-font;
   text-align: center;
   text-transform: uppercase;
+  line-height: 1.2;
 }
 h1 {
   font-size: 24px;
@@ -115,10 +117,10 @@ h2 {
 .home {
   background: #e5e5e5;
   padding: 35px 0;
-  @media (max-width: 1219px) and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     .uk-container {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
     }
   }
@@ -127,36 +129,33 @@ h2 {
     background: 50% 100%/cover url("../img/main_background.png") no-repeat;
   }
 
-  .logo_phone_slogan_col {
+  .logo_and_phone_col {
     text-align: center;
     margin: 0 auto;
     @media screen and (min-width: 768px) {
-      max-width: 230px;
+      max-width: 220px;
     }
-    @media screen and (min-width: 1220px) {
-      float: left;
-    }
-
-    .phone-numbers {
-      line-height: 1.5;
-      font-size: 20px;
+    h3 {
+      margin-top: 25px;
+      margin-bottom: 0;
+      text-transform: none;
+      font-size: 42px;
       font-weight: bold;
     }
-
-    .slogan {
-      @media screen and (min-width: 768px) {
-        margin-top: 15px;
-      }
-      span {
-        font-size: 1.4em;
-        font-weight: bold;
-        text-transform: none;
+    img {
+      max-width: 250px;
+    }
+    .phone-numbers {
+      line-height: 1.5;
+      font-size: 24px;
+      p {
+        margin: 0;
       }
     }
   }
   form {
     text-align: center;
-    background: #e8ae79;
+    background: rgba(232, 174, 121, 0.75);
     border-radius: 5px;
 
     max-width: 250px;
@@ -164,9 +163,6 @@ h2 {
 
     padding: 25px 25px 40px;
     margin: 0 auto;
-    @media screen and (min-width: 1220px) {
-      float: right;
-    }
 
     p {
       font-size: 24px;
@@ -187,6 +183,18 @@ h2 {
       background: $color-bright;
       color: white;
       cursor: pointer;
+    }
+  }
+  .slogan {
+    max-width: 300px;
+    line-height: 1.6;
+    @media screen and (min-width: 768px) {
+      margin-top: 15px;
+    }
+    span {
+      font-size: 1.4em;
+      font-weight: bold;
+      text-transform: none;
     }
   }
 }
@@ -221,8 +229,15 @@ h2 {
           max-width: 150px;
         }
       }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
       h3 {
         margin: 5px 0;
+        text-align: left;
+        text-transform: none;
       }
       .blink-cb-open-popup {
         margin-top: auto;
@@ -234,12 +249,21 @@ h2 {
 
 /* НАЧАЛО блока "advantages" */
 .advantages {
+  background: white;
+  & > div > h2 {
+    margin-bottom: 35px;
+  }
+
   .big-number {
     font-size: 56px;
     font-weight: bold;
   }
   li h2 {
     font-weight: normal;
+    margin-top: 0;
+  }
+  p {
+    font-size: 20px;
   }
   .btn {
     margin-top: 25px;
@@ -301,6 +325,9 @@ h2 {
 .clients {
   padding: 35px 0 50px;
   text-align: center;
+  h2 {
+    margin-bottom: 35px;
+  }
   li > div {
     border: 3px solid #edb57a;
     border-radius: 5px;
