@@ -38,6 +38,7 @@
 <script src="<?php bloginfo('template_directory') ?>/public/js/countUp.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/public/js/jquery.waypoints.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/public/js/scripts.js"></script>
+
 <script src="https://bsh.su/client/script/GET/"></script>
 <script>
 	var submitSMG = new BMModule();

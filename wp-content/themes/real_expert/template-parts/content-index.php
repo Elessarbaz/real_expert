@@ -58,7 +58,6 @@
 		</ul>
 	</div>
 	<!--КОНЕЦ блока "services"-->
-
 	<!--НАЧАЛО блока "advantages"-->
 	<div id="advantages" class="advantages">
 		<div class="uk-container uk-container-center">
