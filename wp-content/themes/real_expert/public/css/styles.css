@@ -139,7 +139,8 @@ h2 {
     padding: 25px 25px 40px;
     margin: 0 auto; }
     .home form p {
-      font-size: 24px; }
+      font-size: 24px;
+      color: white; }
     .home form input {
       font-family: "Champagne&Limousines", sans-serif;
       font-size: 18px;
