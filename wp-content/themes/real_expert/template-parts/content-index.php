@@ -42,10 +42,12 @@
 	<div id="services" class="services uk-container uk-container-center">
 		<?php $services=get_posts(array('category_name'=>'services','nuberposts'=>4 ,'order'=>'ASC','orderby'=>'id')) ?>
 		<h2>Наши услуги по оценке имущества</h2>
-		<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-4" data-uk-grid-margin>
+		<div class="data-uk-slider uk-slidenav-position" data-uk-slider="{autoplay: true}">
+			<div class="uk-slider-container">
+				<ul class="uk-slider uk-grid uk-grid-match uk-grid-width-large-1-4 uk-grid-width-medium-1-2 uk-grid-width-1-1" data-uk-grid-match="{target:'.li-match'}">
 			<?php foreach ($services as $post): setup_postdata($post); ?>
-			<li>
-				<div class="border">
+			<li class='li-match'>
+				<div class="border border-match">
 					<img src="<?= get_the_post_thumbnail_url() ?>">
 					<h2><a href="#"><?= get_the_title() ?></a></h2>
 					<?php the_content() ?>
@@ -55,8 +57,11 @@
 				</div>
 			</li>
 			<?php endforeach; ?>
-		</ul>
-	</div>
+				</ul>
+			</div>
+			<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous"></a>
+			<a href="" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next"></a>
+		</div>
 	<!--КОНЕЦ блока "services"-->
 	<!--НАЧАЛО блока "advantages"-->
 	<div id="advantages" class="advantages">
