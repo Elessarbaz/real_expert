@@ -190,16 +190,13 @@
 			<div class="data-uk-slider uk-slidenav-position" data-uk-slider="{autoplay: true}">
 				<div class="uk-slider-container">
 					<ul class="uk-slider uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-2 uk-grid-width-1-1">
-						<?php $clients=get_posts(array('category_name'=>'clients','numbelposts'=>-1));
-						foreach ($clients as $post): setup_postdata($post);
+						<?php foreach (pp_gallery_get(137) as $image):
 						?>
 						<li>
 							<div>
-								<img src="<?=get_the_post_thumbnail_url()?>" alt="Клиент">
-								<h3><?=get_the_title()?></h3>
-								<p>
-									<?php the_content()?>
-								</p>
+								<a href="<?=$image->url?>" data-uk-lightbox="{group:'clients'}" draggable="false">
+									<img src="<?=$image->url?>" alt="<?=$image->alt?>">
+								</a>
 							</div>
 						</li>
 						<?php endforeach; ?>
