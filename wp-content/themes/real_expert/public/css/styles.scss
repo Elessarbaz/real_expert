@@ -63,6 +63,9 @@ a {
     color: white;
     text-decoration: none;
   }
+  &:active, &:focus, &::selection{
+    box-shadow: 2px 2px 2px black;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -166,6 +169,7 @@ h2 {
 
     p {
       font-size: 24px;
+      color: white;
     }
 
     input {
@@ -218,17 +222,10 @@ h2 {
         justify-content: center;
         align-items: center;
         border-radius: 5px;
-        border: 2px $color-bright solid;
         padding: 15px;
       }
-      &:nth-child(2) .border {
-        border-color: #727271;
-      }
-      &:nth-child(3) .border {
-        border-color: #7690c9;
-      }
-      &:nth-child(4) .border {
-        border-color: #e31e24;
+      .border-match{
+        border: 1px #615555 solid;
       }
       h2 {
         font-size: 20px;
@@ -356,7 +353,8 @@ h2 {
       display: flex;
       flex-flow: column;
       h3 {
-        font-size: 20px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
       }
       img {
         max-width: 65px;
@@ -390,6 +388,7 @@ h2 {
   font-size: 20px;
   line-height: 1.4;
   text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
 
   img {
     padding-bottom: 25px;

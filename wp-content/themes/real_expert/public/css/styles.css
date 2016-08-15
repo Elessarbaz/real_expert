@@ -57,6 +57,8 @@ a {
     background: #f29a4a;
     color: white;
     text-decoration: none; }
+  .btn:active, .btn:focus, .btn::selection {
+    box-shadow: 2px 2px 2px black; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #222;
@@ -137,7 +139,8 @@ h2 {
     padding: 25px 25px 40px;
     margin: 0 auto; }
     .home form p {
-      font-size: 24px; }
+      font-size: 24px;
+      color: white; }
     .home form input {
       font-family: "Champagne&Limousines", sans-serif;
       font-size: 18px;
@@ -179,14 +182,9 @@ h2 {
       justify-content: center;
       align-items: center;
       border-radius: 5px;
-      border: 2px #ef7f1a solid;
       padding: 15px; }
-    .services .uk-grid > li:nth-child(2) .border {
-      border-color: #727271; }
-    .services .uk-grid > li:nth-child(3) .border {
-      border-color: #7690c9; }
-    .services .uk-grid > li:nth-child(4) .border {
-      border-color: #e31e24; }
+    .services .uk-grid > li .border-match {
+      border: 1px #615555 solid; }
     .services .uk-grid > li h2 {
       font-size: 20px; }
     .services .uk-grid > li img {
@@ -288,7 +286,8 @@ h2 {
       display: flex;
       flex-flow: column; }
       .work-scheme .uk-grid > li h3 {
-        font-size: 20px; }
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif; }
       .work-scheme .uk-grid > li img {
         max-width: 65px; }
       @media screen and (min-width: 768px) {
@@ -313,7 +312,8 @@ h2 {
   background: white;
   font-size: 20px;
   line-height: 1.4;
-  text-align: justify; }
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif; }
   .about img {
     padding-bottom: 25px; }
 
