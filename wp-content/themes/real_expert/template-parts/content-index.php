@@ -41,6 +41,8 @@
 				<h1 class="slogan"><?= get_field('slogan-1', 4) ?></h1>
 			</div>
 		</div>
+	</div>
+</div>
 		<!--КОНЕЦ блока "Начало"-->
 
 		<!--НАЧАЛО блока "services"-->
