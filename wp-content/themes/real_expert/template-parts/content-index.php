@@ -142,11 +142,11 @@
 	<!--НАЧАЛО certificates-->
 	<div class="certificates" id="certificates">
 		<div class="uk-container uk-container-center">
-			<h2><?=get_the_title(47)?></h2>
+			<h2><?=get_the_title(141)?></h2>
 			<div class="data-uk-slider uk-slidenav-position" data-uk-slider>
 				<div class="uk-slider-container">
 					<ul class="uk-slider uk-grid uk-grid-width-large-1-3 uk-grid-width-medium-1-2 uk-grid-width-1-1">
-						<?php $gallery=pp_gallery_get(47);
+						<?php $gallery=pp_gallery_get(141);
 						foreach ($gallery as $image):
 						?>
 						<li>

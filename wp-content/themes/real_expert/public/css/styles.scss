@@ -418,8 +418,6 @@ h2 {
 /* НАЧАЛО footer */
 footer {
   font-size: 20px;
-  padding-top: 45px;
-  padding-bottom: 50px;
   background: black;
   color: white;
   .logo-container {
@@ -427,7 +425,7 @@ footer {
     flex-flow: column;
     justify-content: center;
     .logo {
-      width: 100%;
+      width: 85%;
     }
     p {
       text-align: center;

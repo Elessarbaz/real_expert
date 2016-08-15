@@ -336,8 +336,6 @@ h2 {
 /* НАЧАЛО footer */
 footer {
   font-size: 20px;
-  padding-top: 45px;
-  padding-bottom: 50px;
   background: black;
   color: white; }
   footer .logo-container {
@@ -345,7 +343,7 @@ footer {
     flex-flow: column;
     justify-content: center; }
     footer .logo-container .logo {
-      width: 100%; }
+      width: 85%; }
     footer .logo-container p {
       text-align: center;
       font-size: 30px; }
