@@ -28,19 +28,24 @@
 						</p>
 					</div>
 				</div>
-				<form class="blink-mailer">
-					<input type="hidden" name="title" value="Обратня связь">
-					<img src="<?php bloginfo('template_directory') ?>/public/img/telephone.png" alt="Телефон">
-					<p class="success-mail-text"><?=get_field('racall-title',4)?></p>
-					<input type="text" placeholder="Имя" name="Имя">
-					<input type="tel" placeholder="Телефон" name="Телефон">
-					<input type="submit" value="<?=get_field('racall-button',4)?>">
-					<button type="button">Назад</button>
-				</form>
-
-				<h1 class="slogan"><?= get_field('slogan-1', 4) ?></h1>
-			</div>
-		</div>
+            </div>
+            <div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-3">
+                <form class="blink-mailer">
+                    <input type="hidden" name="title" value="Обратня связь">
+                    <img src="<?php bloginfo('template_directory') ?>/public/img/telephone.png" alt="Телефон">
+                    <p class="success-mail-text"><?=get_field('racall-title',4)?></p>
+                    <input type="text" placeholder="Имя" name="Имя">
+                    <input type="tel" placeholder="Телефон" name="Телефон">
+                    <input type="submit" value="<?=get_field('racall-button',4)?>">
+                    <button type="button">Назад</button>
+                </form>
+            </div>
+            <div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-3">
+                <h1 class="slogan"><?= get_field('slogan-1', 4) ?></h1>
+            </div>
+        </div>
+    </div>
+</div>
 		<!--КОНЕЦ блока "Начало"-->
 
 		<!--НАЧАЛО блока "services"-->

@@ -2,13 +2,13 @@
 	<footer id="contacts">
 		<div class="uk-container uk-container-center">
 			<div class="uk-grid">
-				<div class="uk-width-medium-3-10 logo-container">
+				<div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-3-10 logo-container">
 					<a href="/"><img class="logo" src="<?=get_field('logo-f',4)?>" alt="Лого"></a>
 				</div>
-				<div class="uk-width-medium-5-10 map-container">
+				<div class=" uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-5-10 map-container">
 					<?=get_field('map',4)?>
 				</div>
-				<div class="uk-width-medium-2-10 contacts-container">
+				<div class=" uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-2-10 contacts-container">
 					<h3>Контакты</h3>
 
 					<p>
