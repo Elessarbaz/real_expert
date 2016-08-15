@@ -22,6 +22,7 @@
 						<img src="<?php bloginfo('template_directory') ?>/public/img/smartphone-little.png"
 							 alt="Телефон"><br>
 						<a href="tel:<?= get_field('phone-3', 4) ?>"><?= get_field('phone-3', 4) ?></a>
+						<a href="tel:<?= get_field('phone-4', 4) ?>"><?= get_field('phone-4', 4) ?></a>
 					</p>
 				</div>
 			</div>
@@ -42,7 +43,7 @@
 	<div id="services" class="services uk-container uk-container-center">
 		<?php $Services=get_category(3); ?>
 		<?php $services=get_posts(array('category_name'=>'services','nuberposts'=>4 ,'order'=>'ASC','orderby'=>'id')) ?>
-		<h2><?=$Services->name?></h2>
+		<h2><?=$Services->category_description?></h2>
 		<div class="data-uk-slider uk-slidenav-position" data-uk-slider="{autoplay: true}">
 			<div class="uk-slider-container">
 				<ul class="uk-slider uk-grid uk-grid-match uk-grid-width-large-1-4 uk-grid-width-medium-1-2 uk-grid-width-1-1" data-uk-grid-match="{target:'.li-match'}">
