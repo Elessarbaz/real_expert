@@ -45,6 +45,9 @@ a {
   a:hover {
     color: inherit; }
 
+.success-mail-text {
+  display: none; }
+
 @keyframes trasnBtn {
   from {
     background: #ef1a1a; }
@@ -144,7 +147,7 @@ h2 {
       font-size: 20px; }
       .home .logo_and_phone_col .phone-numbers p {
         margin: 0; }
-  .home form {
+  .home .form-main {
     text-align: center;
     background: rgba(232, 174, 121, 0.75);
     border-radius: 5px;
@@ -152,9 +155,9 @@ h2 {
     box-sizing: border-box;
     padding: 25px 25px 40px;
     margin: 0 auto; }
-    .home form p {
+    .home .form-main p {
       font-size: 24px; }
-    .home form input {
+    .home .form-main input {
       font-family: Chadwick;
       font-size: 16px;
       box-sizing: border-box;
@@ -163,12 +166,12 @@ h2 {
       border: none;
       margin: 10px 0;
       padding: 5px 10px; }
-    .home form input[type=submit] {
+    .home .form-main input[type=submit] {
       background: #ef1a1a;
       color: white;
       cursor: pointer;
       transition: all 400ms; }
-      .home form input[type=submit]:hover {
+      .home .form-main input[type=submit]:hover {
         background: #f29a4a; }
   .home .slogan {
     margin: 15px auto 0;
@@ -363,6 +366,12 @@ footer {
     justify-content: center; }
     footer .logo-container .logo {
       width: 85%; }
+      @media (max-width: 768px) {
+        footer .logo-container .logo {
+          margin-bottom: 30px; } }
+      @media (min-width: 768px) {
+        footer .logo-container .logo {
+          margin-bottom: 30px; } }
     footer .logo-container p {
       text-align: center;
       font-size: 30px; }

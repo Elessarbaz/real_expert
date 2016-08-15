@@ -30,7 +30,7 @@
 				</div>
             </div>
             <div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-3">
-                <form class="blink-mailer">
+                <form class="blink-mailer form-main">
                     <input type="hidden" name="title" value="Обратня связь">
                     <img src="<?php bloginfo('template_directory') ?>/public/img/telephone.png" alt="Телефон">
                     <p class="success-mail-text"><?=get_field('racall-title',4)?></p>
