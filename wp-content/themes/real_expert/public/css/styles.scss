@@ -9,6 +9,10 @@
   src: url("../fonts/champagne_and_limousines/Champagne_amp_amp_Limousines_Bold.otf") format("truetype");
   font-weight: bold;
 }
+@font-face {
+  font-family: "Chadwick";
+  src: url("../fonts/9873.otf") format("truetype");
+}
 /* КОНЕЦ подключаем шрифт "Champagne&Limousines"*/
 
 /* НАЧАЛО инициализация переменных SASS: */
@@ -35,7 +39,7 @@ $main-font: "Champagne&Limousines", sans-serif;
 body {
   background: url("../img/backround_plaster.jpg");
   color: #222;
-  font-family: $main-font;
+  font-family: Chadwick;
   font-size: 18px;
   line-height: 1.2;
 }
@@ -51,7 +55,7 @@ a {
   background: #ef1a1a;
   color: white;
   display: inline-block;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 2px;
   border: none;
   margin: 10px 0;
@@ -150,7 +154,7 @@ h2 {
     }
     .phone-numbers {
       line-height: 1.5;
-      font-size: 24px;
+      font-size: 20px;
       p {
         margin: 0;
       }
@@ -169,7 +173,6 @@ h2 {
 
     p {
       font-size: 24px;
-      color: white;
     }
 
     input {
@@ -245,6 +248,8 @@ h2 {
         margin: 5px 0;
         text-align: left;
         text-transform: none;
+        font-family: Chadwick;
+        font-size: 16px;
       }
       .blink-cb-open-popup {
         margin-top: auto;
@@ -340,6 +345,7 @@ h2 {
   }
   .btn {
     margin-top: 25px;
+    font-size: 18px;
   }
 }
 /* КОНЕЦ блока "advantages" */
