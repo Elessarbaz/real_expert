@@ -10,31 +10,39 @@
     </style>
 	<div id="home" class="home">
 		<div class="uk-container uk-container-center">
-			<div class="logo_and_phone_col">
-				<img src="<?=get_field('logo',4)?>" alt="Лого">
-				<div class="phone-numbers">
-					<h3>Контакты</h3>
-					<p>
-						<img src="<?php bloginfo('template_directory') ?>/public/img/telephone-little.png" alt="Телефон"><br>
-						<a href="tel:<?= get_field('phone-1', 4) ?>"><?= get_field('phone-1', 4) ?></a><br>
-						<a href="tel:<?= get_field('phone-2', 4) ?>"><?= get_field('phone-2', 4) ?></a><br><br>
+			<div class="uk-grid">
+				<div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-3">
+					<div class="logo_and_phone_col">
+						<img src="<?=get_field('logo',4)?>" alt="Лого">
+						<div class="phone-numbers">
+							<h3>Контакты</h3>
+							<p>
+								<img src="<?php bloginfo('template_directory') ?>/public/img/telephone-little.png" alt="Телефон"><br>
+								<a href="tel:<?= get_field('phone-1', 4) ?>"><?= get_field('phone-1', 4) ?></a><br>
+								<a href="tel:<?= get_field('phone-2', 4) ?>"><?= get_field('phone-2', 4) ?></a><br><br>
 
-						<img src="<?php bloginfo('template_directory') ?>/public/img/smartphone-little.png"
-							 alt="Телефон"><br>
-						<a href="tel:<?= get_field('phone-3', 4) ?>"><?= get_field('phone-3', 4) ?></a>
-						<a href="tel:<?= get_field('phone-4', 4) ?>"><?= get_field('phone-4', 4) ?></a>
-					</p>
+								<img src="<?php bloginfo('template_directory') ?>/public/img/smartphone-little.png"
+									 alt="Телефон"><br>
+								<a href="tel:<?= get_field('phone-3', 4) ?>"><?= get_field('phone-3', 4) ?></a>
+								<a href="tel:<?= get_field('phone-4', 4) ?>"><?= get_field('phone-4', 4) ?></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-3">
+					<form class="blink-mailer">
+						<input type="hidden" name="title" value="Обратня связь">
+						<img src="<?php bloginfo('template_directory') ?>/public/img/telephone.png" alt="Телефон">
+						<p class="success-mail-text"><?=get_field('racall-title',4)?></p>
+						<input type="text" placeholder="Имя" name="Имя">
+						<input type="tel" placeholder="Телефон" name="Телефон">
+						<input type="submit" value="<?=get_field('racall-button',4)?>">
+					</form>
+				</div>
+				<div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-3">
+					<h1 class="slogan"><?= get_field('slogan-1', 4) ?></h1>
 				</div>
 			</div>
-			<form class="blink-mailer">
-				<input type="hidden" name="title" value="Обратня связь">
-				<img src="<?php bloginfo('template_directory') ?>/public/img/telephone.png" alt="Телефон">
-				<p class="success-mail-text"><?=get_field('racall-title',4)?></p>
-				<input type="text" placeholder="Имя" name="Имя">
-				<input type="tel" placeholder="Телефон" name="Телефон">
-				<input type="submit" value="<?=get_field('racall-button',4)?>">
-			</form>
-			<h1 class="slogan"><?= get_field('slogan-1', 4) ?></h1>
 		</div>
 	</div>
 	<!--КОНЕЦ блока "Начало"-->
