@@ -32,7 +32,7 @@
 				<p class="success-mail-text"><?=get_field('racall-title',4)?></p>
 				<input type="text" placeholder="Имя" name="Имя">
 				<input type="tel" placeholder="Телефон" name="Телефон">
-				<input type="submit" value="Получить консультацию">
+				<input type="submit" value="<?=get_field('racall-button',4)?>">
 			</form>
 			<h1 class="slogan"><?= get_field('slogan-1', 4) ?></h1>
 		</div>
