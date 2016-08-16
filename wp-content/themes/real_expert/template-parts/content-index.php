@@ -23,7 +23,7 @@
 
 							<img src="<?php bloginfo('template_directory') ?>/public/img/smartphone-little.png"
 								 alt="Телефон"><br>
-							<a href="tel:<?= get_field('phone-3', 4) ?>"><?= get_field('phone-3', 4) ?></a>
+							<a href="tel:<?= get_field('phone-3', 4) ?>"><?= get_field('phone-3', 4) ?></a><br>
 							<a href="tel:<?= get_field('phone-4', 4) ?>"><?= get_field('phone-4', 4) ?></a>
 						</p>
 					</div>
