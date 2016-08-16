@@ -200,7 +200,7 @@ h2 {
       border-radius: 5px;
       padding: 15px; }
     .services .uk-grid > li .border-match {
-      border: 1px #615555 solid; }
+      border: 1px #ef7f1a solid; }
     .services .uk-grid > li h2 {
       font-size: 20px; }
     .services .uk-grid > li img {
@@ -357,6 +357,25 @@ footer {
   font-size: 20px;
   background: black;
   color: white; }
+  @media (min-width: 768px) and (max-height: 1024px) {
+    footer h3 {
+      text-align: center !important; }
+    footer address {
+      text-align: center; }
+    footer p {
+      font-size: 11px; } }
+  @media (min-width: 768px) and (max-height: 1024px) and (orientation: landscape) {
+    footer address {
+      text-align: left; }
+    footer p {
+      font-size: 11px !important; } }
+  footer address {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+    footer address h3 {
+      font-size: 26px; }
+    footer address p {
+      font-size: 13px; }
   footer .logo-container {
     display: flex;
     flex-flow: column;
@@ -368,7 +387,11 @@ footer {
           margin-bottom: 30px; } }
       @media (min-width: 768px) {
         footer .logo-container .logo {
-          margin-bottom: 30px; } }
+          margin-bottom: 30px;
+          margin-top: 30px; } }
+      @media (min-width: 768px) and (height: 1024px) {
+        footer .logo-container .logo {
+          width: 60%; } }
     footer .logo-container p {
       text-align: center;
       font-size: 30px; }
@@ -392,5 +415,17 @@ footer {
           text-align: left; } }
 
 /* КОНЕЦ footer */
+.five-services {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .five-services .border {
+    border-radius: 5px;
+    border: 1px solid #ef7f1a;
+    padding: 20px; }
+    .five-services .border li {
+      list-style: inside circle; }
+
+.li-match-target {
+  background: white; }
 
 /*# sourceMappingURL=styles.css.map */

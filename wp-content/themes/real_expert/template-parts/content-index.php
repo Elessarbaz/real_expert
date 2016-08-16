@@ -54,9 +54,9 @@
 		<!--НАЧАЛО блока "services"-->
 		<div id="services" class="services uk-container uk-container-center">
 			<?php $Services=get_category(3); ?>
-			<?php $services=get_posts(array('category_name'=>'services','nuberposts'=>4 ,'order'=>'ASC','orderby'=>'id')) ?>
+			<?php $services=get_posts(array('category_name'=>'services','numberposts'=>4 ,'order'=>'ASC','orderby'=>'id')) ?>
 			<h2><?=$Services->category_description?></h2>
-			<div class="data-uk-slider uk-slidenav-position" data-uk-slider="{autoplay: true}">
+			<div class="data-uk-slider uk-slidenav-position" data-uk-slider>
 				<div class="uk-slider-container">
 					<ul class="uk-slider uk-grid uk-grid-match uk-grid-width-large-1-4 uk-grid-width-medium-1-2 uk-grid-width-1-1" data-uk-grid-match="{target:'.li-match'}">
 						<?php foreach ($services as $post): setup_postdata($post); ?>
@@ -73,9 +73,23 @@
 						<?php endforeach; ?>
 					</ul>
 				</div>
-				<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous"></a>
-				<a href="" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next"></a>
+<!--				<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous"></a>-->
+<!--				<a href="" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next"></a>-->
 			</div>
+
+            <div class="five-services">
+				<div class="border">
+					<?php $post  = get_post(130)?>
+					<h2><a href="#"><?= $post->post_title ?></a></h2>
+					<article>
+						<?= $post->post_content ?>
+					</article>
+					<div class="blink-cb-open-popup">
+						<a class="search-blink-cb-module-btn btn" href="#recall">Связаться с нами</a>
+					</div>
+				</div>
+            </div>
+
 			<!--КОНЕЦ блока "services"-->
 			<!--НАЧАЛО блока "advantages"-->
 			<div id="advantages" class="advantages">
@@ -138,7 +152,7 @@
 				<h2><?=get_the_title(52)?></h2>
 				<ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-3" data-uk-grid-margin>
 					<?php $gallery=pp_gallery_get(52); $count=count($gallery); foreach ($gallery as $key=>$image): ?>
-						<li>
+						<li >
 							<div>
 								<img src="<?=$image->url?>">
 								<h3><?=$image->description?></h3>
@@ -156,18 +170,29 @@
 			<div class="certificates" id="certificates">
 				<div class="uk-container uk-container-center">
 					<h2><?=get_the_title(141)?></h2>
+					<div id="gallery-pp-oo" class="">
+						<?php $gallery=pp_gallery_get(141); foreach($gallery as $galleryItem) : ?>
+							<a href="<?=$galleryItem->url?>">
+								<img alt="<?=$galleryItem->alt?>"
+									 src="<?=$galleryItem->url?>"
+									 data-image="<?=$galleryItem->url?>">
+							</a>
+						<?php endforeach; ?>
+					</div>
+					<div style="margin-top: 40px;"></div>
 					<div class="data-uk-slider uk-slidenav-position" data-uk-slider>
 						<div class="uk-slider-container">
 							<ul class="uk-slider uk-grid uk-grid-width-large-1-3 uk-grid-width-medium-1-2 uk-grid-width-1-1">
-								<?php $gallery=pp_gallery_get(141);
-								foreach ($gallery as $image):
-									?>
-									<li>
-										<a href="<?=$image->url?>" data-uk-lightbox="{group:'certificates'}">
-											<img src="<?=$image->url?>" alt="Сертификат">
-										</a>
-									</li>
-								<?php endforeach; ?>
+
+								<?php
+//								foreach ($gallery as $image):
+//									?>
+<!--									<li>-->
+<!--										<a href="--><?//=$image->url?><!--" data-uk-lightbox="{group:'certificates'}">-->
+<!--											<img src="--><?//=$image->url?><!--" alt="Сертификат">-->
+<!--										</a>-->
+<!--									</li>-->
+<!--								--><?php //endforeach; ?>
 							</ul>
 						</div>
 						<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous"></a>
@@ -207,8 +232,10 @@
 								<?php foreach (pp_gallery_get(137) as $image):
 									?>
 									<li>
-										<div>
-											<a href="<?=$image->url?>" data-uk-lightbox="{group:'clients'}" draggable="false">
+										<div  class="li-match-target">
+											<a style="    height: 100%;
+    width: 100%;
+    display: block;" href="<?=$image->url?>" data-uk-lightbox="{group:'clients'}" draggable="false">
 												<img src="<?=$image->url?>" alt="<?=$image->alt?>">
 											</a>
 										</div>
