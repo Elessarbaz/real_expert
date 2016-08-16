@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/public/css/components/slider.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/public/css/components/slidenav.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/public/css/components/sticky.min.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/public/css/animate.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/public/css/styles.css">
 </head>
 <body>

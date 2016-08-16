@@ -53,10 +53,21 @@
 <script src="https://bsh.su/client/script/GET/"></script>
 <script>
 	var submitSMG = new BMModule();
-	submitSMG.submitForm(function(success) { $('.blink-mailer').hide(500); $('.success-mail-text p').html(success); $('.success-mail-text').show(500);   }, function(error) {console.log((error))});
+	submitSMG.submitForm(function(success) {
+		$('.blink-mailer').removeClass('flipInY');
+		$('.blink-mailer').toggleClass('flipOutY');
+		$('.success-mail-text').removeClass('flipOutY');
+		$('.success-mail-text').addClass('flipInY');
+		$('.success-mail-text').toggleClass('uk-hidden');
+		$('.success-mail-text p').html(success);
+		},
+		function(error) {console.log((error))});
 	$('.success-mail-text input').click(function () {
-		$('.success-mail-text').hide(500);
-		$('.blink-mailer').show(500);
+		$('.success-mail-text').removeClass('flipInY');
+		$('.success-mail-text').addClass('flipOutY');
+		$('.blink-mailer').toggleClass('flipOutY ');
+		$('.blink-mailer').toggleClass('flipInY');
+		$('.success-mail-text').toggleClass('uk-hidden');
 	});
 </script>
 <script>

@@ -29,8 +29,8 @@
 					</div>
 				</div>
             </div>
-            <div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-3">
-                <form class="blink-mailer form-main">
+            <div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-3 uk-position-relative">
+                <form class="blink-mailer form-main animated">
                     <input type="hidden" name="title" value="Обратня связь">
                     <img src="<?php bloginfo('template_directory') ?>/public/img/telephone.png" alt="Телефон">
                     <p><?=get_field('racall-title',4)?></p>
@@ -38,7 +38,7 @@
                     <input type="tel" placeholder="Телефон" name="Телефон">
                     <input type="submit" value="<?=get_field('racall-button',4)?>">
                 </form>
-				<div class=" form-main success-mail-text">
+				<div class=" form-main success-mail-text uk-hidden animated" style="position: absolute; top: 0; left: 0; right: 0">
 					<p></p>
 					<input type="submit" value="Назад">
 				</div>
