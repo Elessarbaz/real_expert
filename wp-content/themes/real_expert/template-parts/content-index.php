@@ -34,12 +34,13 @@
                     <input type="hidden" name="title" value="Обратня связь">
                     <img src="<?php bloginfo('template_directory') ?>/public/img/telephone.png" alt="Телефон">
                     <p><?=get_field('racall-title',4)?></p>
-                    <input type="text" placeholder="Имя" name="Имя">
-                    <input type="tel" placeholder="Телефон" name="Телефон">
-                    <input type="submit" value="<?=get_field('racall-button',4)?>">
+                    <input id="name" type="text" required placeholder="Имя" name="Имя">
+                    <input id="tel" type="tel" required placeholder="Телефон" name="Телефон">
+                    <input id="call" type="submit" value="<?=get_field('racall-button',4)?>">
                 </form>
 				<div class=" form-main success-mail-text uk-hidden animated" style="position: absolute; top: 0; left: 0; right: 0">
-					<p></p>
+					<img src="<?php bloginfo('template_directory') ?>/public/img/default.svg" alt="">
+					<p class="uk-hidden"></p>
 					<input type="submit" value="Назад">
 				</div>
             </div>
@@ -63,7 +64,7 @@
 							<li class='li-match'>
 								<div class="border border-match">
 									<img src="<?= get_the_post_thumbnail_url() ?>">
-									<h2><a href="#"><?= get_the_title() ?></a></h2>
+									<h2><?= get_the_title() ?></h2>
 									<?php the_content() ?>
 									<div class="blink-cb-open-popup">
 										<a class="search-blink-cb-module-btn btn" href="#recall">Связаться с нами</a>
@@ -80,7 +81,6 @@
             <div class="five-services">
 				<div class="border">
 					<?php $post  = get_post(130)?>
-					<h2><a href="#"><?= $post->post_title ?></a></h2>
 					<article>
 						<?= $post->post_content ?>
 					</article>

@@ -62,14 +62,24 @@
 <script>
 	var submitSMG = new BMModule();
 	submitSMG.submitForm(function(success) {
-		$('.blink-mailer').removeClass('flipInY');
-		$('.blink-mailer').toggleClass('flipOutY');
-		$('.success-mail-text').removeClass('flipOutY');
-		$('.success-mail-text').addClass('flipInY');
-		$('.success-mail-text').toggleClass('uk-hidden');
+
 		$('.success-mail-text p').html(success);
+		$('.success-mail-text p').removeClass('uk-hidden');
+		$('.success-mail-text img').addClass('uk-hidden');
 		},
 		function(error) {console.log((error))});
+	$('.blink-mailer input#call').click(function () {
+		if(($('.blink-mailer input#name').val() == '') || ($('.blink-mailer input#tel').val() == '')){
+
+		}
+		else{
+			$('.blink-mailer').removeClass('flipInY');
+			$('.blink-mailer').toggleClass('flipOutY');
+			$('.success-mail-text').removeClass('flipOutY');
+			$('.success-mail-text').addClass('flipInY');
+			$('.success-mail-text').toggleClass('uk-hidden');
+		}
+	});
 	$('.success-mail-text input').click(function () {
 		$('.success-mail-text').removeClass('flipInY');
 		$('.success-mail-text').addClass('flipOutY');
