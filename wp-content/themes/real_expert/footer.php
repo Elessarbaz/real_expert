@@ -39,7 +39,7 @@
 <script src="<?php bloginfo('template_directory') ?>/public/js/components/sticky.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/public/js/countUp.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/public/js/jquery.waypoints.js"></script>
-<script src="<?php bloginfo('template_directory') ?>/public/js/unitegallery.min.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/public/js/unitegallery.js"></script>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/public/js/unite-gallery.css">
 	<script type='text/javascript' src="<?php bloginfo('template_directory') ?>/public/js/ug-theme-tiles.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/public/js/scripts.js"></script>
@@ -98,6 +98,8 @@
 			jQuery("#gallery-pp-oo").unitegallery({
 				tiles_type:"justified"
 			});
+
+			console.clear();
 		});
 	</script>
 	<?=get_field('google',4)?>
