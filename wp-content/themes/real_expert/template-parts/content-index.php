@@ -169,9 +169,10 @@
 			<!--НАЧАЛО certificates-->
 			<div class="certificates" id="certificates">
 				<div class="uk-container uk-container-center">
+					<?php $gallery=pp_gallery_get(141);?>
 					<h2><?=get_the_title(141)?></h2>
 					<div id="gallery-pp-oo" class="">
-						<?php $gallery=pp_gallery_get(141); foreach($gallery as $galleryItem) : ?>
+						<?php  foreach($gallery as $galleryItem) : ?>
 							<a href="<?=$galleryItem->url?>">
 								<img alt="<?=$galleryItem->alt?>"
 									 src="<?=$galleryItem->url?>"
@@ -225,11 +226,12 @@
 			<!--НАЧАЛО clients-->
 			<div id="clients" class="clients">
 				<div class="uk-container uk-container-center">
+					<?php $gallery=pp_gallery_get(137); ?>
 					<h2><?=get_the_title(137)?></h2>
 					<div class="data-uk-slider uk-slidenav-position" data-uk-slider="{autoplay: true}">
 						<div class="uk-slider-container">
 							<ul class="uk-slider uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-2 uk-grid-width-1-1">
-								<?php foreach (pp_gallery_get(137) as $image):
+								<?php foreach ( $gallery as $image):
 									?>
 									<li>
 										<div  class="li-match-target">
