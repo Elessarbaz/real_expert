@@ -10,7 +10,7 @@
 </style>
 <div id="home" class="home">
 	<div class="uk-container uk-container-center">
-		<div class="uk-grid">
+		<div class="uk-grid" style="padding-left: 12px">
 			<div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-3">
 				<div class="logo_and_phone_col">
 					<img src="<?=get_field('logo',4)?>" alt="Лого">
@@ -30,7 +30,7 @@
 				</div>
             </div>
             <div class="uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-3 uk-position-relative">
-                <form class="blink-mailer form-main animated">
+                <form class="blink-mailer form-main animated" style="width: 250px;">
                     <input type="hidden" name="title" value="Обратня связь">
                     <img src="<?php bloginfo('template_directory') ?>/public/img/telephone.png" alt="Телефон">
                     <p><?=get_field('racall-title',4)?></p>
@@ -38,7 +38,14 @@
                     <input id="tel" type="tel" required placeholder="Телефон" name="Телефон">
                     <input id="call" type="submit" value="<?=get_field('racall-button',4)?>">
                 </form>
-				<div class=" form-main success-mail-text uk-hidden animated" style="position: absolute; top: 0; left: 0; right: 0">
+				<style>
+					@media (min-width: 1024px){
+						.form-main{
+							left: 35px !important;
+						}
+					}
+				</style>
+				<div class=" form-main success-mail-text uk-hidden animated" style="position: absolute; top: 0; left: 25px; right: 0; width: 250px">
 					<img src="<?php bloginfo('template_directory') ?>/public/img/default.svg" alt="">
 					<p class="uk-hidden"></p>
 					<input type="submit" value="Назад">
