@@ -39,7 +39,7 @@
                     <input id="call" type="submit" value="<?=get_field('racall-button',4)?>">
                 </form>
 				<style>
-					@media (min-width: 1024px){
+					@media (min-width: 1220px){
 						.form-main{
 							left: 35px !important;
 						}
@@ -64,25 +64,23 @@
 			<?php $Services=get_category(3); ?>
 			<?php $services=get_posts(array('category_name'=>'services','numberposts'=>4 ,'order'=>'ASC','orderby'=>'id')) ?>
 			<h2><?=$Services->category_description?></h2>
-			<div class="data-uk-slider uk-slidenav-position" data-uk-slider>
-				<div class="uk-slider-container">
-					<ul class="uk-slider uk-grid uk-grid-match uk-grid-width-large-1-4 uk-grid-width-medium-1-2 uk-grid-width-1-1" data-uk-grid-match="{target:'.li-match'}">
-						<?php foreach ($services as $post): setup_postdata($post); ?>
-							<li class='li-match'>
-								<div class="border border-match">
-									<img src="<?= get_the_post_thumbnail_url() ?>">
-									<h2><?= get_the_title() ?></h2>
-									<?php the_content() ?>
-									<div class="blink-cb-open-popup">
-										<a class="search-blink-cb-module-btn btn" href="#recall">Связаться с нами</a>
-									</div>
+			<div class="uk-grid uk-grid-match" data-uk-grid-match="{target:'.ul-match-box'}">
+				<?php foreach ($services as $post): setup_postdata($post); ?>
+					<div class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-4">
+						<div class='li-match'>
+							<div style="    height: 100%;
+    border: 1px solid #ef7f1a;
+    border-radius: 5px" class="border border-match">
+								<img style="width:200px" src="<?= get_the_post_thumbnail_url() ?>">
+								<h2><?= get_the_title() ?></h2>
+								<?php the_content() ?>
+								<div class="blink-cb-open-popup">
+									<a class="search-blink-cb-module-btn btn" href="#recall">Связаться с нами</a>
 								</div>
-							</li>
-						<?php endforeach; ?>
-					</ul>
-				</div>
-<!--				<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous"></a>-->
-<!--				<a href="" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next"></a>-->
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
 			</div>
 
             <div class="five-services">
