@@ -64,7 +64,7 @@
 			<?php $Services=get_category(3); ?>
 			<?php $services=get_posts(array('category_name'=>'services','numberposts'=>4 ,'order'=>'ASC','orderby'=>'id')) ?>
 			<h2><?=$Services->category_description?></h2>
-			<div class="uk-grid uk-grid-match" data-uk-grid-match="{target:'.ul-match-box'}">
+			<div class="uk-grid uk-grid-match" >
 				<?php foreach ($services as $post): setup_postdata($post); ?>
 					<div class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-4">
 						<div class='li-match'>
@@ -72,8 +72,10 @@
     border: 1px solid #ef7f1a;
     border-radius: 5px" class="border border-match">
 								<img style="width:200px" src="<?= get_the_post_thumbnail_url() ?>">
-								<h2><?= get_the_title() ?></h2>
-								<?php the_content() ?>
+								<h2 style="min-height: 56px"><?= get_the_title() ?></h2>
+								<div class="article-match-class" style="min-height: 245px">
+									<?php the_content() ?>
+								</div>
 								<div class="blink-cb-open-popup">
 									<a class="search-blink-cb-module-btn btn" href="#recall">Связаться с нами</a>
 								</div>

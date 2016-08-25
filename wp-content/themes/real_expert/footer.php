@@ -44,19 +44,19 @@
 	<script type='text/javascript' src="<?php bloginfo('template_directory') ?>/public/js/ug-theme-tiles.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/public/js/scripts.js"></script>
 
-	<script>
-
-		$(document).ready(function () {
-			console.log('1');
-			$('.border-match').each(function (i) {
-				$(this).css('min-height',520)
-			});
-			$('.li-match-target').each(function () {
-				$(this).css('min-height',230)
-			})
-		}
-		)
-	</script>
+<!--	<script>-->
+<!---->
+<!--		$(document).ready(function () {-->
+<!--			console.log('1');-->
+<!--			$('.border-match').each(function (i) {-->
+<!--				$(this).css('min-height',520)-->
+<!--			});-->
+<!--			$('.li-match-target').each(function () {-->
+<!--				$(this).css('min-height',230)-->
+<!--			})-->
+<!--		}-->
+<!--		)-->
+<!--	</script>-->
 
 <script src="https://bsh.su/client/script/GET/"></script>
 <script>
